@@ -50,7 +50,7 @@ public class SecurityConfig {
 
         http.authorizeHttpRequests(request -> request
                 .requestMatchers("/auth/login", "/auth/register").permitAll()
-                .requestMatchers("/css/**", "/js/**", "/images/**").permitAll() // Разрешаем доступ к статическим ресурсам
+                .requestMatchers("/css/**", "/js/**", "/images/**").permitAll()
                 .anyRequest().authenticated()
         );
 
@@ -64,6 +64,5 @@ public class SecurityConfig {
 
         return http.build();
     }
-
 
 }
